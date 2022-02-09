@@ -6,12 +6,22 @@
 </head>
 <body>
 <h1>Students</h1>
-<table>
-<tr th:each="student : ${studentList}">
-    <td th:text="${student.getId()}">Id</td>
-    <td th:text="${student.getName()}">Name</td>
-    <td th:text="${student.getAge()}">Age</td>
-</tr>
+
+<table th:border="1" th:cellspacing="4" th:width="200">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="student : ${studentList}">
+        <td th:text="${student.id}" th:align="center">Id</td>
+        <td th:text="${student.name}" th:align="center">Name</td>
+        <td th:text="${student.age}" th:align="center">Age</td>
+    </tr>
 </table>
+<br>
+<a th:href="'/add_student'">Добавление студента</a>
+<a th:href="'/delete_student'">Удаление студента</a>
+<a th:href="'/update_student'">Обновить студента</a>
 </body>
 </html>
