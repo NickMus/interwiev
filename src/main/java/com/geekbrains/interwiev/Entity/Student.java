@@ -1,4 +1,4 @@
-package Entity;
+package com.geekbrains.interwiev.Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
