@@ -1,20 +1,19 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+
+<html xmlns:form="http://www.thymeleaf.org" lang="en">
+
+<html>
 <head>
-    <title>Add Student</title>
+    <title>Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p><b>Add student</b></p>
-<form action="/add_student"  th:object="${student}" method="post" >
-    Name: <input type=text name="name" th:field="*{name}">
+<form action="#" th:action="@{}" th:object="${student}" method="post">
+    Name: <input type=text th:field="*{name}">
     <br>
-    Age:  <input type=number name="age" th:field="*{age}">
+    Age: <input type=number th:field="*{age}">
     <br>
-    <button type="submit" value="Submit">ADD</button>
+    <input type="submit" value="Submit"/>
 </form>
-<br>
-<a th:href="'/'">К списку</a>
-
 </body>
 </html>
